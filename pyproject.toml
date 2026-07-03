@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adapter-ros2"
+version = "0.0.1"
+description = "EXPERIMENTAL Decision OS execution adapter for ROS 2 / robotics: governed tools reached only when the kernel permits. Holds no authority."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "PolyForm-Noncommercial-1.0.0" }
+authors = [{ name = "Ali Pourrahim" }]
+dependencies = ["decision-os-min"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.6", "mypy>=1.11"]
+
+[tool.setuptools]
+packages = ["dos_adapter_ros2"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
