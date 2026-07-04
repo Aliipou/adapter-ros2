@@ -24,7 +24,10 @@ def actuate_gripper(state) -> str:
 
 # The tool registry + per-tool capability specs (capability = "tool:<name>").
 TOOLS = {"move_arm": move_arm, "actuate_gripper": actuate_gripper}
-SPECS = {"move_arm": {"capability": "tool:move_arm"}, "actuate_gripper": {"capability": "tool:actuate_gripper"}}
+SPECS: dict[str, dict[str, Any]] = {
+    "move_arm": {"capability": "tool:move_arm"},
+    "actuate_gripper": {"capability": "tool:actuate_gripper"},
+}
 
 
 def governed_tools(governor: Any) -> dict[str, Any]:

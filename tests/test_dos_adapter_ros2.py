@@ -1,7 +1,7 @@
 import pytest
-from decision_os_min import Governor, GovernanceRefused, set_actor
+from decision_os_min import GovernanceRefused, Governor, set_actor
 
-from dos_adapter_ros2 import SPECS, TOOLS, governed_tools
+from dos_adapter_ros2 import TOOLS, governed_tools
 
 _ANY = next(iter(TOOLS))                       # some tool name from this adapter
 POLICY = {"grants": {"agent:ops": [f"tool:{_ANY}"]}, "default": "deny"}
@@ -28,5 +28,6 @@ def test_unauthorized_actor_never_reaches_the_actuator(tmp_path):
 def _sample_args(name):
     # crude arg discovery for the smoke test
     import inspect
+
     from dos_adapter_ros2 import __dict__ as d
     return [p for p in inspect.signature(d[name]).parameters]

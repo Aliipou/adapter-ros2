@@ -21,3 +21,19 @@ packages = ["dos_adapter_ros2"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = false
+warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = ["decision_os_min", "decision_os_min.*"]
+ignore_missing_imports = true
