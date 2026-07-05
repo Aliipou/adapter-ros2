@@ -6,6 +6,10 @@ Policy Enforcement Point and runs only when the `decision-os-min` kernel
 authorizes the action. The adapter holds **no authority** of its own and never
 bypasses the kernel — every call is authorized and audited.
 
+> Part of the Decision OS — governed by the Legitimacy ⊥ Authority pipeline
+> (FDK legitimacy → AuthGate authority). Adapters adapt tools into governed
+> effects and hold **no authority** of their own.
+
 ## What it adapts
 
 | Tool | Capability | Effect |
