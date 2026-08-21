@@ -1,5 +1,7 @@
 # adapter-ros2
 
+**Live (graph):** [https://ali-adapter-ros2.vercel.app](https://ali-adapter-ros2.vercel.app)
+
 Decision OS / AuthGate **execution adapter** for ROS 2 / robotics actuation. It
 exposes robot actions as **governed tools**: each tool is the effect *behind* a
 Policy Enforcement Point and runs only when the `decision-os-min` kernel
